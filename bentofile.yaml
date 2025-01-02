@@ -1,0 +1,12 @@
+service: 'service:BgeEmbedService'
+include:
+  - '*.py'
+python:
+  requirements_txt: './requirements.txt'
+  index_url: 'https://pypi.tuna.tsinghua.edu.cn/simple'
+  extra_index_url: ['https://download.pytorch.org/whl/cu124']
+docker:
+  python_version: '3.12'
+  env:
+    UV_INDEX_STRATEGY: 'unsafe-best-match'
+    UV_EXTRA_INDEX_URL: 'https://download.pytorch.org/whl/cu124'

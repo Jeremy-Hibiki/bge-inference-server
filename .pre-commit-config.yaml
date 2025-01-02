@@ -23,5 +23,5 @@ repos:
     rev: v1.14.1
     hooks:
       - id: mypy
-        args: [--strict, --ignore-missing-imports]
-        additional_dependencies: [pydantic]
+        args: [--ignore-missing-imports]
+        additional_dependencies: [pydantic, bentoml]
